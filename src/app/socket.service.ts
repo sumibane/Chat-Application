@@ -11,7 +11,7 @@ import * as io from 'socket.io-client';
 })
 export class SocketService {
   //Variable Declaraitons
-  private url = "https://chatapi.edwisor.com/api/v1/";
+  private url = "https://chatapi.edwisor.com";
   private socket;
 
   constructor(public http:HttpClient) {
@@ -31,7 +31,7 @@ export class SocketService {
    //online-user-list event
    public onlineUserList = () => {
      return Observable.create((observer)=>{
-       this.socket.on("online-User-List",(userList)=>{
+       this.socket.on("online-user-list",(userList)=>{
          observer.next(userList);
        });
      });

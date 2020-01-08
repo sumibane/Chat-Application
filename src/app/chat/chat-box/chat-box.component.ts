@@ -74,7 +74,6 @@ export class ChatBoxComponent implements OnInit {
       };
       this.userLists.push(temp);
     }
-    console.log(this.userLists);
     });
  }
 }
