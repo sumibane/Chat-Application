@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ChatModule } from './chat/chat.module';
 import { UserModule } from './user/user.module';
 import { ApplicationService } from './application.service';
+import {SocketService} from './socket.service';
 //Dependencies import
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';

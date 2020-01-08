@@ -33,15 +33,17 @@ export class ApplicationService {
   public handleError(err:HttpErrorResponse){
     let errorMessage="";
     if (err.error instanceof Error){
-      errorMessage = `An error occurred: ${err.error.message}`
+      errorMessage = `An error occurred: ${err.error.message}`;
     }
+    console.error(errorMessage);
+    return Observable.throw(errorMessage);
   }
   //Set Local Storage Information
   public setLocalStorage:any = (data:JSON) => {
-    localStorage.setItem("userInfo",JSON.stringify(data));
+    var k= localStorage.setItem("userInfo",JSON.stringify(data));
   }
   //Get Information from Local Storage
   public getLocalStorage:any = () =>{
-    return JSON.parse(localStorage.getItem("userInfor"));
+    return JSON.parse(localStorage.getItem("userInfo"));
   }
 }
